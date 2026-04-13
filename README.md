@@ -76,13 +76,49 @@ claude-harness evaluates and builds your project's AI environment across six axe
 
 ## Installation
 
+**Step 1.** Add the marketplace:
+
 ```bash
-claude plugin add studiotemple/harness-setup
+/plugin marketplace add studiotemple/harness-setup
+```
+
+**Step 2.** Install the plugin:
+
+```bash
+/plugin install claude-harness@harness-setup
 ```
 
 After installation, two new commands become available in Claude Code:
 - `/harness-setup` — Build a new harness
 - `/harness-check` — Diagnose an existing harness
+
+### Team Installation (auto-install for all team members)
+
+Add to your project's `.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "harness-setup": {
+      "source": {
+        "source": "github",
+        "repo": "studiotemple/harness-setup"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "claude-harness@harness-setup": true
+  }
+}
+```
+
+This auto-registers the marketplace and enables the plugin when team members open the project.
+
+### Updating
+
+```bash
+/plugin marketplace update harness-setup
+```
 
 ---
 
