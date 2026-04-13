@@ -91,19 +91,40 @@ claude-harness evaluates and builds your project's AI environment across six axe
 
 ## Installation
 
-**Step 1.** Add the marketplace:
+### CLI (Terminal)
 
 ```bash
-/plugin marketplace add studiotemple/harness-setup
+# 1. Add the marketplace
+claude plugin marketplace add studiotemple/harness-setup
+
+# 2. Install the plugin
+claude plugin install claude-harness@harness-setup
 ```
 
-**Step 2.** Install the plugin:
+### IDE (VS Code / JetBrains)
 
-```bash
+In the Claude Code chat panel, type the slash commands directly:
+
+```
+/plugin marketplace add studiotemple/harness-setup
 /plugin install claude-harness@harness-setup
 ```
 
-After installation, two new commands become available in Claude Code:
+> **Note:** The `/plugin` command requires a recent version of Claude Code.
+> If `/plugin` is not recognized, update your extension first:
+> - **VS Code**: `Cmd+Shift+X` → Search "Claude Code" → Click **Update** → Restart
+> - **JetBrains**: `Settings` → `Plugins` → Search "Claude Code" → Click **Update** → Restart
+> - **CLI**: `brew upgrade claude-code` or `npm update -g @anthropic-ai/claude-code`
+
+### Verify Installation
+
+After installation, run `/plugin` and check the **Installed** tab to confirm `claude-harness` appears. Then reload plugins:
+
+```
+/reload-plugins
+```
+
+Two new commands become available:
 - `/harness-setup` — Build a new harness
 - `/harness-check` — Diagnose an existing harness
 
@@ -131,7 +152,7 @@ This auto-registers the marketplace and enables the plugin when team members ope
 
 ### Updating
 
-```bash
+```
 /plugin marketplace update harness-setup
 ```
 
