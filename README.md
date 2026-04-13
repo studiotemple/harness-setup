@@ -91,7 +91,7 @@ claude-harness evaluates and builds your project's AI environment across six axe
 
 ## Installation
 
-### CLI (Terminal)
+Open a terminal and run:
 
 ```bash
 # 1. Add the marketplace
@@ -101,30 +101,18 @@ claude plugin marketplace add studiotemple/harness-setup
 claude plugin install claude-harness@harness-setup
 ```
 
-### IDE (VS Code / JetBrains)
-
-In the Claude Code chat panel, type the slash commands directly:
-
-```
-/plugin marketplace add studiotemple/harness-setup
-/plugin install claude-harness@harness-setup
-```
-
-> **Note:** The `/plugin` command requires a recent version of Claude Code.
-> If `/plugin` is not recognized, update your extension first:
-> - **VS Code**: `Cmd+Shift+X` → Search "Claude Code" → Click **Update** → Restart
-> - **JetBrains**: `Settings` → `Plugins` → Search "Claude Code" → Click **Update** → Restart
-> - **CLI**: `brew upgrade claude-code` or `npm update -g @anthropic-ai/claude-code`
+> **Note:** Plugin installation must be done from the **terminal CLI**, not from the IDE chat panel.
+> The `/plugin` command in IDE extensions (VS Code, JetBrains) may not be supported depending on your version.
+> Once installed via CLI, the plugin commands (`/harness-setup`, `/harness-check`) work everywhere — both CLI and IDE.
+>
+> If `claude` is not found, install or update Claude Code first:
+>
+> - **Homebrew**: `brew install claude-code` (or `brew upgrade claude-code`)
+> - **npm**: `npm install -g @anthropic-ai/claude-code` (or `npm update -g @anthropic-ai/claude-code`)
 
 ### Verify Installation
 
-After installation, run `/plugin` and check the **Installed** tab to confirm `claude-harness` appears. Then reload plugins:
-
-```
-/reload-plugins
-```
-
-Two new commands become available:
+After installation, two new commands become available in both CLI and IDE:
 - `/harness-setup` — Build a new harness
 - `/harness-check` — Diagnose an existing harness
 
