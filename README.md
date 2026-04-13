@@ -91,20 +91,32 @@ claude-harness evaluates and builds your project's AI environment across six axe
 
 ## Installation
 
-Open a terminal and run:
+### IDE (VS Code / JetBrains)
+
+In the Claude Code chat panel, type:
+
+```shell
+/plugin marketplace add studiotemple/harness-setup
+/plugin install claude-harness@harness-setup
+```
+
+> **If `/plugin` is not recognized** (shows "Unknown skill" error), your IDE extension version may not support this command yet.
+> In that case, open a **separate terminal** and install via CLI instead:
+>
+> ```bash
+> claude plugin marketplace add studiotemple/harness-setup
+> claude plugin install claude-harness@harness-setup
+> ```
+>
+> Plugins installed via CLI are automatically available in the IDE — no extra steps needed.
+
+### CLI (Terminal)
 
 ```bash
-# 1. Add the marketplace
 claude plugin marketplace add studiotemple/harness-setup
-
-# 2. Install the plugin
 claude plugin install claude-harness@harness-setup
 ```
 
-> **Note:** Plugin installation must be done from the **terminal CLI**, not from the IDE chat panel.
-> The `/plugin` command in IDE extensions (VS Code, JetBrains) may not be supported depending on your version.
-> Once installed via CLI, the plugin commands (`/harness-setup`, `/harness-check`) work everywhere — both CLI and IDE.
->
 > If `claude` is not found, install or update Claude Code first:
 >
 > - **Homebrew**: `brew install claude-code` (or `brew upgrade claude-code`)
@@ -112,7 +124,7 @@ claude plugin install claude-harness@harness-setup
 
 ### Verify Installation
 
-After installation, two new commands become available in both CLI and IDE:
+After installation, two new commands become available (works in both CLI and IDE):
 - `/harness-setup` — Build a new harness
 - `/harness-check` — Diagnose an existing harness
 
