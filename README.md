@@ -27,12 +27,7 @@ claude-harness evaluates and builds your project's AI environment across six axe
 ## Installation
 
 ```bash
-claude plugin add seokangseok/claude-harness
-```
-
-Or install from the marketplace:
-```bash
-claude plugin add claude-harness
+claude plugin add studiotemple/harness-setup
 ```
 
 ## Usage

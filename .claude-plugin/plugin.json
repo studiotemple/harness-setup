@@ -2,12 +2,12 @@
   "name": "claude-harness",
   "version": "1.0.0",
   "description": "Set up and diagnose AI harness environments for any project — guardrails, context, and workflows that help Claude work effectively.",
-  "author": "seokangseok",
+  "author": "James Seo",
   "license": "MIT",
   "keywords": ["harness", "scaffolding", "guardrails", "project-setup", "ai-workflow", "claude-code", "best-practices"],
-  "homepage": "https://github.com/seokangseok/claude-harness",
+  "homepage": "https://github.com/studiotemple/harness-setup",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seokangseok/claude-harness.git"
+    "url": "https://github.com/studiotemple/harness-setup.git"
   }
 }
