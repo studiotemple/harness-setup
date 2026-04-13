@@ -35,6 +35,21 @@ With a harness, they become **effective team members** that follow your project'
 
 claude-harness is designed around this insight: a good harness **evolves**. It adds constraints when needed and removes them when outgrown.
 
+### Important: A Foundation, Not a Finished Product
+
+> **claude-harness builds the foundation. You carve the details.**
+
+This plugin generates a **baseline harness** — a solid starting point with sensible defaults for any project. But every project has its own domain, conventions, team dynamics, and risk profile. The generated rules, commands, and hooks are **generic scaffolding** that gets you from zero to functional in minutes.
+
+The real value comes from what you do next:
+- **Refine the rules** to match your actual coding conventions, not just generic best practices
+- **Adjust the hooks** to block the dangerous commands specific to your infrastructure
+- **Customize the commands** to fit your team's workflow (PR process, deploy pipeline, review cadence)
+- **Add domain-specific rules** that only your project needs (e.g., data pipeline conventions, compliance requirements)
+- **Remove what doesn't apply** — a Python project doesn't need TypeScript rules, a solo project doesn't need team approval workflows
+
+Think of it like a house frame: claude-harness gives you the structure, but the interior design is yours. The more you tailor it to your project, the more effective your AI collaboration becomes.
+
 ---
 
 ## The 6-Axis Framework
@@ -582,6 +597,10 @@ After any major change — new team member, tech stack update, large refactoring
 ### Can I remove generated files I don't need?
 
 Absolutely. The harness should serve your project, not the other way around. If a rule or command isn't adding value, remove it. That's what "Evolve, don't accumulate" means.
+
+### Is the generated harness ready to use as-is?
+
+It's ready to **start** with, not ready to **finish** with. claude-harness generates a generic baseline that works for any project. But the harness that truly makes AI effective is the one you've shaped to your project's specific needs — your naming conventions, your deploy process, your team's review standards, your domain's edge cases. Run `/harness-setup` to get the foundation, then invest time carving it into something that fits your project like a glove. The [Customization Guide](docs/customization.md) shows you how.
 
 ---
 
