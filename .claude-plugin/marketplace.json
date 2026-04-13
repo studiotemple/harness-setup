@@ -1,0 +1,10 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/anthropics/claude-code@main/packages/plugin-marketplace/marketplace.schema.json",
+  "marketplace": "claude-harness",
+  "plugins": [
+    {
+      "name": "claude-harness",
+      "source": "./"
+    }
+  ]
+}
